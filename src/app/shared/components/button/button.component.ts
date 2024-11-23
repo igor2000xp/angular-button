@@ -1,3 +1,7 @@
+/* Examples
+https://stackblitz.com/run?file=src%2Fexample%2Fbutton-overview-example.ts
+*/
+
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
 import { ICONS_MAP } from '../../../core/tokens';
@@ -15,8 +19,6 @@ import { MatButtonModule } from '@angular/material/button'; // Import MatButtonM
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) { }
-
   btnType = ButtonType
 
   @Input() buttonType: ButtonType = this.btnType.flat
@@ -28,5 +30,7 @@ export class ButtonComponent {
   @Input() size!: number
 
   @Input() isDisabled: boolean = false
+
+  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) { }
 
 }
