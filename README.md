@@ -4,11 +4,11 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Links
 
-[GitHub]()
+[GitHub](https://github.com/igor2000xp/angular-button)
 
-[StackBlitz]()
+[StackBlitz](https://stackblitz.com/~/github.com/igor2000xp/angular-button)
 
-[Notion](https://www.notion.so/Button-is-magic-bd1b1ee50bb64e2ab496c1f524477f2f#1466bddbc4918097ac2ac9617831f015)
+[Notion](https://www.notion.so/Button-is-magic-bd1b1ee50bb64e2ab496c1f524477f2f?pvs=25)
 
 ***/Volumes/MacUss/Users/__louvre/mentoring-Poland/My-study-projects/StackBlitz/!angular-superbutton/angular-button***
 
