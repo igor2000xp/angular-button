@@ -2,6 +2,16 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
 
+## Links
+
+[GitHub]()
+
+[StackBlitz]()
+
+[Notion](https://www.notion.so/Button-is-magic-bd1b1ee50bb64e2ab496c1f524477f2f#1466bddbc4918097ac2ac9617831f015)
+
+***/Volumes/MacUss/Users/__louvre/mentoring-Poland/My-study-projects/StackBlitz/!angular-superbutton/angular-button***
+
 ## Development server
 
 To start a local development server, run:
