@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
 import { ICONS_MAP } from '../../../core/tokens';
 import { IconsMap } from '../../models/icons.model';
 import { ButtonType } from '../../enums/button-types.enum';
@@ -11,7 +11,8 @@ import { MatButtonModule } from '@angular/material/button'; // Import MatButtonM
   imports: [CommonModule, MatIconModule, MatButtonModule],
   providers: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  styleUrl: './button.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) { }
