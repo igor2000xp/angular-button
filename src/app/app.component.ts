@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 // import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { AddressFormComponent } from "./pages/components/address-form/address-form.component";
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -29,6 +30,7 @@ import { CommonModule } from '@angular/common';
     // BrowserAnimationsModule,
     // BrowserModule
     CommonModule,
+    AddressFormComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
