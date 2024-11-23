@@ -3,16 +3,18 @@ import { Component, Inject, Input } from '@angular/core';
 import { ICONS_MAP } from '../../../core/tokens';
 import { IconsMap } from '../../models/icons.model';
 import { ButtonType } from '../../enums/button-types.enum';
+import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
+import { MatButtonModule } from '@angular/material/button'; // Import MatButtonModule
 
 @Component({
   selector: 'app-button',
-  imports: [],
-  providers: [CommonModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule],
+  providers: [],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) {}
+  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) { }
 
   btnType = ButtonType
 
