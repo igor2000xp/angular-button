@@ -7,14 +7,14 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Company" formControlName="company">
+            <input matInput placeholder="Company" formControlName="company" />
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="First name" formControlName="firstName">
+            <input matInput placeholder="First name" formControlName="firstName" />
             @if (addressForm.controls['firstName'].hasError('required')) {
               <mat-error>First name is <strong>required</strong></mat-error>
             }
@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Last name" formControlName="lastName">
+            <input matInput placeholder="Last name" formControlName="lastName" />
             @if (addressForm.controls['lastName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
@@ -55,7 +55,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="City" formControlName="city">
+            <input matInput placeholder="City" formControlName="city" />
             @if (addressForm.controls['city'].hasError('required')) {
               <mat-error>City is <strong>required</strong></mat-error>
             }
@@ -77,8 +77,14 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
-            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            <input
+              matInput
+              #postalCode
+              maxlength="5"
+              placeholder="Postal Code"
+              type="number"
+              formControlName="postalCode" />
+            <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
           </mat-form-field>
         </div>
       </div>
@@ -93,7 +99,14 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <!-- <button mat-raised-button color="primary" type="submit">Submit</button> -->
+      <app-button
+        [buttonType]="buttonType.flat"
+        [buttonClass]="addressForm.invalid ? 'disabled' : 'card'"
+        type="submit"
+        [isDisabled]="addressForm.invalid">
+        Login
+      </app-button>
     </mat-card-actions>
   </mat-card>
 </form>
