@@ -1,6 +1,7 @@
 <h1>Hello, {{ title }}</h1>
 <p>Congratulations! Your app is running. 🎉</p>
-<div>
+<mat-divider></mat-divider>
+<section>
   <app-button
     [buttonType]="buttonType.flat"
     [buttonClass]="tags.length >= 5 ? 'disabled' : 'card'"
@@ -16,6 +17,10 @@
     [isDisabled]="form.invalid">
     Login
   </app-button>
+</section>
+
+<mat-divider></mat-divider>
+<section>
   @if (true) {
     <app-button [buttonType]="buttonType.fab" [icon]="iconsMap['tune']" [size]="24" (click)="toggleFilterBlock()" />
   }
@@ -26,8 +31,10 @@
       Logout
     </app-button>
   }
-</div>
-<div>
+</section>
+
+<mat-divider></mat-divider>
+<section>
   <!-- <div class="filter" *ngIf="true">
   <p class="label">Sorting by:</p> -->
 
@@ -43,6 +50,55 @@
   <mat-form-field class="form-field" appearance="outline">
     <input #word class="input-el" matInput />
   </mat-form-field>
-</div>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">FAB</div>
+
+  <button mat-fab aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  <button mat-fab disabled aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">Mini FAB</div>
+
+  <button mat-mini-fab aria-label="Example icon button with a menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="example-label">Extended Fab</div>
+
+  <button mat-fab extended>
+    <mat-icon>favorite</mat-icon>
+    Basic
+  </button>
+
+  <button mat-fab extended disabled>
+    <mat-icon>favorite</mat-icon>
+    Disabled
+  </button>
+
+  <a mat-fab extended routerLink=".">
+    <mat-icon>favorite</mat-icon>
+    Link
+  </a>
+</section>
 
 <router-outlet />
