@@ -15,6 +15,7 @@ import { MatDividerModule } from '@angular/material/divider';
 // import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { AddressFormComponent } from "./pages/components/address-form/address-form.component";
+import { HeaderComponent } from './core/components/header/header.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
@@ -30,7 +31,8 @@ import { AddressFormComponent } from "./pages/components/address-form/address-fo
     // BrowserAnimationsModule,
     // BrowserModule
     CommonModule,
-    AddressFormComponent
+    AddressFormComponent,
+    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
