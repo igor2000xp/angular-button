@@ -6,12 +6,12 @@ import { ValidatorFn, AbstractControl } from '@angular/forms';
 })
 export class CustomvalidationService {
   checkPassword(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
+    return (control: AbstractControl): Record<string, boolean> | null => {
       if (!control.value) {
         return null;
       }
       const regex = new RegExp(
-        '^(?=.*?[A-Z])(?=.*?[$,&,+,:,;,=,?,@,#,|,<,>,.,^,*,(,),%,!,-,])(?=.*?[a-z])(?=.*?[0-9]).{8,}$',
+        '^(?=.*?[A-Z])(?=.*?[$,&,+,:,;,=,?,@,#,|,<,>,.,^,*,(,),%,!,-,])(?=.*?[a-z])(?=.*?[0-9]).{8,}$'
       );
       const valid = regex.test(control.value);
       return valid ? null : { invalidPassword: true };
@@ -19,7 +19,7 @@ export class CustomvalidationService {
   }
 
   checkURL() {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
+    return (control: AbstractControl): Record<string, boolean> | null => {
       let valid = true;
 
       try {
@@ -33,7 +33,7 @@ export class CustomvalidationService {
   }
 
   checkImageURL() {
-    return (control: AbstractControl): { [key: string]: boolean } | null => {
+    return (control: AbstractControl): Record<string, boolean> | null => {
       let valid = true;
 
       try {

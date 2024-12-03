@@ -9,7 +9,6 @@ import { MatCardModule } from '@angular/material/card';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 import { ButtonType } from '../../../shared/enums/button-types.enum';
 
-
 @Component({
   selector: 'app-address-form',
   templateUrl: './address-form.component.html',
@@ -22,8 +21,8 @@ import { ButtonType } from '../../../shared/enums/button-types.enum';
     MatRadioModule,
     MatCardModule,
     ButtonComponent,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
 export class AddressFormComponent {
   buttonType = ButtonType;
@@ -36,10 +35,8 @@ export class AddressFormComponent {
     address2: null,
     city: [null, Validators.required],
     state: [null, Validators.required],
-    postalCode: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(5)])
-    ],
-    shipping: ['free', Validators.required]
+    postalCode: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(5)])],
+    shipping: ['free', Validators.required],
   });
 
   hasUnitNumber = false;
@@ -103,7 +100,7 @@ export class AddressFormComponent {
     { name: 'Washington', abbreviation: 'WA' },
     { name: 'West Virginia', abbreviation: 'WV' },
     { name: 'Wisconsin', abbreviation: 'WI' },
-    { name: 'Wyoming', abbreviation: 'WY' }
+    { name: 'Wyoming', abbreviation: 'WY' },
   ];
 
   onSubmit(): void {

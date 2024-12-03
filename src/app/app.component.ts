@@ -14,12 +14,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 // import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { AddressFormComponent } from "./pages/components/address-form/address-form.component";
+import { AddressFormComponent } from './pages/components/address-form/address-form.component';
 import { HeaderComponent } from './core/components/header/header.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     RouterOutlet,
     ButtonComponent,
@@ -32,10 +33,10 @@ import { HeaderComponent } from './core/components/header/header.component';
     // BrowserModule
     CommonModule,
     AddressFormComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'angular-button';
@@ -46,11 +47,14 @@ export class AppComponent {
   tags: string[] = [''];
   userName = 'John';
 
-  constructor(private fb: FormBuilder, @Inject(ICONS_MAP) public iconsMap: IconsMap) {
+  constructor(
+    private fb: FormBuilder,
+    @Inject(ICONS_MAP) public iconsMap: IconsMap
+  ) {
     this.form = this.fb.nonNullable.group({
       login: ['', [Validators.required, Validators.email]],
       pass: ['', [Validators.required]],
-    })
+    });
   }
 
   onSubmit(): void {
@@ -60,9 +64,9 @@ export class AppComponent {
     }
   }
 
-  resetForm() { }
-  toggleFilterBlock() { }
-  logout() { }
+  resetForm() {}
+  toggleFilterBlock() {}
+  logout() {}
 
   sortByWord(word: string) {
     // if (this.isOpened && this.hasSearchWord) {

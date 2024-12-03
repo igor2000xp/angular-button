@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button'; // Import MatButtonM
 
 @Component({
   selector: 'app-button',
+  standalone: true,
   imports: [CommonModule, MatIconModule, MatButtonModule],
   providers: [],
   templateUrl: './button.component.html',
@@ -19,18 +20,17 @@ import { MatButtonModule } from '@angular/material/button'; // Import MatButtonM
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-  btnType = ButtonType
+  btnType = ButtonType;
 
-  @Input() buttonType: ButtonType = this.btnType.flat
+  @Input() buttonType: ButtonType = this.btnType.flat;
 
-  @Input() buttonClass!: string
+  @Input() buttonClass!: string;
 
-  @Input() icon!: keyof typeof this.iconsMap
+  @Input() icon!: keyof typeof this.iconsMap;
 
-  @Input() size!: number
+  @Input() size!: number;
 
-  @Input() isDisabled: boolean = false
+  @Input() isDisabled = false;
 
-  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) { }
-
+  constructor(@Inject(ICONS_MAP) public iconsMap: IconsMap) {}
 }
